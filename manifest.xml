@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/Framework/App/Manifest/Schema/manifest-2.0.xsd">
+    <meta>
+        <name>ShopwareStoreTracker</name>
+        <label>Shopware Store Tracker</label>
+        <description>An App which stores data about physical store locations in real time</description>
+        <author>YourNameHere</author>
+        <copyright>(c) 2024 YourNameHere</copyright>
+        <version>1.0.0</version>
+        <icon>[]</icon>
+        <license>MIT</license>
+    </meta>
+</manifest>

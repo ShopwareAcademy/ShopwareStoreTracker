@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/System/CustomEntity/Xml/entity-1.0.xsd">
+        <entity name="ce_physical_shop">
+            <fields>
+                <string name="name" store-api-aware="true" translatable="false" />
+                <json name="street_address" store-api-aware="true" translatable="false" />
+                <string name="country" store-api-aware="true" translatable="false" />
+                <text name="description" store-api-aware="true" translatable="true" />
+                <bool name="open_to_public" default="true" store-api-aware="true" />
+                <email name="email" required="true" store-api-aware="true" />
+            </fields>
+        </entity>
+</entities>

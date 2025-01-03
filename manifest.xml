@@ -10,4 +10,13 @@
         <icon>[]</icon>
         <license>MIT</license>
     </meta>
+    <setup>
+        <registrationUrl>http://localhost:8001/app/lifecycle/register</registrationUrl>
+        <secret>[SuperSecretString]</secret>
+    </setup>
+    <webhooks>
+        <webhook name="appActivated" url="http://localhost:8001/app/lifecycle/activate" event="app.activated"/>
+        <webhook name="appDeactivated" url="http://localhost:8001/app/lifecycle/deactivate" event="app.deactivated"/>
+        <webhook name="appDeleted" url="http://localhost:8001/app/lifecycle/delete" event="app.deleted"/>
+    </webhooks>
 </manifest>

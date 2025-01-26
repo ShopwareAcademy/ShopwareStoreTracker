@@ -19,4 +19,10 @@
         <webhook name="appDeactivated" url="http://localhost:8001/app/lifecycle/deactivate" event="app.deactivated"/>
         <webhook name="appDeleted" url="http://localhost:8001/app/lifecycle/delete" event="app.deleted"/>
     </webhooks>
+    <permissions>
+        <read>ce_physical_shop</read>
+        <create>ce_physical_shop</create>
+        <update>ce_physical_shop</update>
+        <delete>ce_physical_shop</delete>
+    </permissions>
 </manifest>

@@ -1,0 +1,16 @@
+{
+	"name": "ShopwareStoreTracker",
+	"author": "Scott A Dev",
+	"description": {
+		"en-gb": "An educational theme-app"
+	},
+	"views": [
+		"@Storefront",
+		"@Plugins",
+		"@ShopwareStoreTracker"
+	],
+	"style": [
+		"@Storefront"
+	],
+    "previewMedia": "app/storefront/dist/assets/kudosPreview.svg"
+}

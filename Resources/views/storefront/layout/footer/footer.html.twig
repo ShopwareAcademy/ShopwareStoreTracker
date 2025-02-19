@@ -2,5 +2,25 @@
 
 {% block layout_footer_service_menu_content %}
     {{ parent() }}
-    <h1> Check me out I am custom!</h1> 
+    {% if footer.hasExtension('physicalShops') %}
+        <ul class="physical-shop__list" style="display:grid; gap: 10px">
+            {% for shop in footer.getExtension('physicalShops') %}
+                <li class="physical_shop__item" style="list-style:none">
+                    <strong class="physical-shop__item title">{{ shop.name }}</strong>
+                    <ul class="physical-shop__item address">
+                        {% for name, value in shop.streetAddress %}
+                            <ul class="physical-shop__street-address">
+                                {% if name and value %}
+                                    <strong>{{ name }}</strong>
+                                    {{value}}
+                                {% endif %}
+                            </ul>
+                        {% endfor %}
+                    </ul>
+                    <span class="physical-shop__item country"><strong>Country:</strong>{{ shop.country }}</span>
+                    <span class="physical-shop__item email"><strong>Email:</strong>{{ shop.email }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 {% endblock %}

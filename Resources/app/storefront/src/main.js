@@ -4,4 +4,4 @@ import StockCheck from './stock-check/stock-check.plugin.js';
 
 // Register your plugin via the existing PluginManager
 const PluginManager = window.PluginManager;
-PluginManager.register('StockCheck', StockCheck, '.product-detail-ordernumber');
+PluginManager.register('StockCheck', StockCheck, '[data-stock-check]');

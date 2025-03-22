@@ -1,0 +1,25 @@
+.physical-shop__list {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.physical-shop__list > li, .product-stock__item {
+    padding: 10px;
+    background-color: #EEE;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+
+.product-stock__list {
+    max-height: 300px;
+    overflow-y: scroll;
+    display: grid;
+    gap: 15px;
+    list-style: none;
+}
+
+.product-stock__item > p {
+    margin: 0px;
+}

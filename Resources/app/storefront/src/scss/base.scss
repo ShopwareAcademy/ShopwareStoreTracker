@@ -1,0 +1,46 @@
+.physical-shop {
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        margin: 10px 0;
+        overflow: hidden;
+        background-color: #FFF;
+
+        &:hover .physical-shop__info {
+            display: block;
+        }
+    }
+
+    &__info {
+            display: none;
+    }
+}
+
+.physical-shop__list > li, .product-stock__item {
+    padding: 10px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+.product-stock {
+    &__list {
+        max-height: 300px;
+        overflow-y: scroll;
+        display: grid;
+        gap: 15px;
+        list-style: none;
+    }
+
+    &__item {
+        display: grid;
+        grid-auto-flow: column;
+
+        p {
+            margin: 0px;
+        }
+    }
+}

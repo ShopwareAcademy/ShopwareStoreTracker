@@ -6,7 +6,7 @@
         <description>An App which stores data about physical store locations in real time</description>
         <author>YourNameHere</author>
         <copyright>(c) 2024 YourNameHere</copyright>
-        <version>1.0.5</version>
+        <version>1.0.6</version>
         <icon>[]</icon>
         <license>MIT</license>
     </meta>
@@ -18,6 +18,7 @@
         <webhook name="appActivated" url="http://localhost:8001/app/lifecycle/activate" event="app.activated"/>
         <webhook name="appDeactivated" url="http://localhost:8001/app/lifecycle/deactivate" event="app.deactivated"/>
         <webhook name="appDeleted" url="http://localhost:8001/app/lifecycle/delete" event="app.deleted"/>
+        <webhook name="sstAppActivated" url="http://localhost:8001/upload/physical-stores" event="app.activated"/>
     </webhooks>
     <permissions>
         <read>ce_physical_shop</read>

@@ -25,5 +25,7 @@
         <create>ce_physical_shop</create>
         <update>ce_physical_shop</update>
         <delete>ce_physical_shop</delete>
+        <read>order</read>
+        <update>order</update>
     </permissions>
 </manifest>

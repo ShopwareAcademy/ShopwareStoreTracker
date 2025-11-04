@@ -37,5 +37,12 @@
 
     &__item > p {
         margin: 0px;
+    &__item {
+        display: grid;
+        grid-auto-flow: column;
+
+        p {
+            margin: 0px;
+        }
     }
 }

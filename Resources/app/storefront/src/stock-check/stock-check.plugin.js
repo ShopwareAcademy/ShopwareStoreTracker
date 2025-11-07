@@ -3,10 +3,7 @@ import AppClient from 'src/service/app-client.service.ts';
 
 export default class StockCheck extends PluginBaseClass {
     client;
-    shopId;
-    targetNode;
     productNumber;
-    stockData;
 
     async init() {        
         this.productNumber = this.el.innerText;

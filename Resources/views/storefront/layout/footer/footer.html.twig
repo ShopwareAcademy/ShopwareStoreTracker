@@ -1,27 +1,7 @@
-{% sw_extends '@storefront/storefront/layout/footer/footer.html.twig' %}
+{% sw_extends '@Storefront/storefront/layout/footer/footer.html.twig' %}
 
-{% block layout_footer_service_menu_content %}
+{% block layout_footer_bottom %}
     {{ parent() }}
-    {% if footer.hasExtension('physicalShops') %}
-        <ul class="physical-shop__list">
-            {% for shop in footer.getExtension('physicalShops') %}
-                <li class="physical-shop__item" style="list-style:none">
-                    <strong class="physical-shop__item title">{{ shop.name }}</strong>
-                    <div class="physical-shop__info">
-                        <ul class="physical-shop__item address">
-                            {% for name, value in shop.streetAddress %}
-                                <ul class="physical-shop__street-address">
-                                    {% if name and value %}
-                                        <strong>{{ name }}:</strong>    {{value}}
-                                    {% endif %}
-                                </ul>
-                            {% endfor %}
-                        </ul>
-                        <span class="physical-shop__item country"><strong>Country:</strong>{{ shop.country }}</span>
-                        <span class="physical-shop__item email"><strong>Email:</strong>{{ shop.email }}</span>
-                    </div>
-                </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+
+    <h1>Check me out I'm custom!</h1>
 {% endblock %}

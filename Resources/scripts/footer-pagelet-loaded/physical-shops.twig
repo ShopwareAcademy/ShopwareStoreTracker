@@ -1,6 +1,0 @@
-{% set page = hook.page %}
-{# @var page \Shopware\Storefront\Page\Product\ProductPage #}
-
-{% set shops = services.repository.search('ce_physical_shop', {}) %}
-
-{% do page.addArrayExtension('physicalShops', shops.getElements()) %}

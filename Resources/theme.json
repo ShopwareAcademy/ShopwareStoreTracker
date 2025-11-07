@@ -14,8 +14,7 @@
     	"app/storefront/src/scss/base.scss"
   	],
 	"script": [
-		"@Storefront",
-		"app/storefront/dist/storefront/js/shopware-store-tracker/shopware-store-tracker.js"
+		"@Storefront"
 	],
     "previewMedia": "app/storefront/dist/assets/kudosPreview.svg"
 }

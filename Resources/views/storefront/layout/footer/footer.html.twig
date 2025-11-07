@@ -1,4 +1,4 @@
-{% sw_extends '@storefront/storefront/layout/footer/footer.html.twig' %}
+{% sw_extends '@Storefront/storefront/layout/footer/footer.html.twig' %}
 
 {% block layout_footer_service_menu_content %}
     {{ parent() }}
@@ -12,7 +12,7 @@
                             {% for name, value in shop.streetAddress %}
                                 <ul class="physical-shop__street-address">
                                     {% if name and value %}
-                                        <strong>{{ name }}:</strong>    {{value}}
+                                        <strong>{{ name }}:</strong> {{value}}
                                     {% endif %}
                                 </ul>
                             {% endfor %}

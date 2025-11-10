@@ -2,7 +2,7 @@
 	"name": "ShopwareStoreTracker",
 	"author": "Scott A Dev",
 	"description": {
-		"en-gb": "An educational theme-app"
+		"en-GB": "An educational theme-app"
 	},
 	"views": [
 		"@Storefront",

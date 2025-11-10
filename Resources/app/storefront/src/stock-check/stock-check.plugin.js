@@ -3,7 +3,6 @@ import AppClient from 'src/service/app-client.service.ts';
 
 export default class StockCheck extends PluginBaseClass {
     client;
-    shopId;
     productNumber;
     stockData;
 
@@ -48,34 +47,34 @@ export default class StockCheck extends PluginBaseClass {
 
         // Loop through the stock data and input relevant information into the appropriate node
         for (const stockInfo of this.stockData) {
-            let newStockitem = this.generateStockCheckRow(
+            const newStockItem = this.generateStockCheckRow(
                 stockItem.cloneNode(),
                 stockInfo.name,
                 stockInfo.country,
                 stockInfo.stockQuantity
             );
-            stockList.appendChild(newStockitem);
+            stockList.appendChild(newStockItem);
         }
 
         // remove initial template li
         stockItem.remove();
-        // Inject final result into the buy-box
+        // Inject the final result into the buy-box
         buyBox.appendChild(stockList);
     }
 
-    generateStockCheckRow(target, left = 'Name', middle = "Country", right = "Quantity") {
-            let rowLeft = document.createElement('strong');
-            let rowMiddle = document.createElement('p');
-            let rowRight = document.createElement('span');
+    generateStockCheckRow(target, left = 'Name', middle = 'Country', right = 'Quantity') {
+        const rowLeft = document.createElement('strong');
+        const rowMiddle = document.createElement('p');
+        const rowRight = document.createElement('span');
 
-            rowLeft.textContent = left;
-            rowMiddle.textContent = "Country: " + middle;
-            rowRight.textContent = "Quantity: " + right;
+        rowLeft.textContent   = left;
+        rowMiddle.textContent = "Country: " + middle;
+        rowRight.textContent  = "Quantity: " + right;
 
-            target.appendChild(rowLeft);
-            target.appendChild(rowMiddle);
-            target.appendChild(rowRight);
+        target.appendChild(rowLeft);
+        target.appendChild(rowMiddle);
+        target.appendChild(rowRight);
 
-            return target;
+        return target;
     }
 }

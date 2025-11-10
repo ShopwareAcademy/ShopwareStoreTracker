@@ -25,6 +25,8 @@
         <create>ce_physical_shop</create>
         <update>ce_physical_shop</update>
         <delete>ce_physical_shop</delete>
+
+        <!-- Permissions for Flow Action -->
         <read>order</read>
         <update>order</update>
     </permissions>

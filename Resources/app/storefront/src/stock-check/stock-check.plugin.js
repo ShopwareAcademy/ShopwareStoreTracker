@@ -3,7 +3,6 @@ import AppClient from 'src/service/app-client.service.ts';
 
 export default class StockCheck extends PluginBaseClass {
     client;
-    shopId;
     productNumber;
     stockData;
 
@@ -45,33 +44,37 @@ export default class StockCheck extends PluginBaseClass {
         const stockList = contentClone.querySelector('.product-stock__list');
         const stockItem = contentClone.querySelector('.product-stock__item');
         stockItem.classList.add('product-stock__item');
-        let stockItemClone = null;
-        let stockItemHeading;
-        let stockItemAddress;
-        let stockItemQuantity;
-        
+
         // Loop through the stock data and input relevant information into the appropriate node
         for (const stockInfo of this.stockData) {
-            stockItemClone = stockItem.cloneNode();
-
-            stockItemHeading = document.createElement('h4');
-            stockItemHeading.textContent = stockInfo.name;
-            stockItemClone.appendChild(stockItemHeading);
-
-            stockItemAddress = document.createElement('p');
-            stockItemAddress.textContent = 'Address: ' + stockInfo.address;
-            stockItemClone.appendChild(stockItemAddress);
-
-            stockItemQuantity = document.createElement('span');
-            stockItemQuantity.textContent = 'Quantity: ' + stockInfo.stockQuantity;
-            stockItemClone.appendChild(stockItemQuantity);
-
-            stockList.appendChild(stockItemClone);
+            const newStockItem = this.generateStockCheckRow(
+                stockItem.cloneNode(),
+                stockInfo.name,
+                stockInfo.country,
+                stockInfo.stockQuantity
+            );
+            stockList.appendChild(newStockItem);
         }
-        
+
         // remove initial template li
         stockItem.remove();
-        // Inject final result into the buy-box
+        // Inject the final result into the buy-box
         buyBox.appendChild(stockList);
+    }
+
+    generateStockCheckRow(target, left = 'Name', middle = 'Country', right = 'Quantity') {
+        const rowLeft = document.createElement('strong');
+        const rowMiddle = document.createElement('p');
+        const rowRight = document.createElement('span');
+
+        rowLeft.textContent   = left;
+        rowMiddle.textContent = "Country: " + middle;
+        rowRight.textContent  = "Quantity: " + right;
+
+        target.appendChild(rowLeft);
+        target.appendChild(rowMiddle);
+        target.appendChild(rowRight);
+
+        return target;
     }
 }

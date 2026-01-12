@@ -1,6 +1,12 @@
 {% set page = hook.page %}
-{# @var page \Shopware\Storefront\Page\Product\ProductPage #}
 
-{% set shops = services.repository.search('ce_physical_shop', {}) %}
+{# Data-loading service (you will use this in a later learning unit) #}
+{# {% set shops = services.repository.search('ce_physical_shop', {}) %} #}
 
-{% do page.addArrayExtension('physicalShops', shops.getElements()) %}
+{# Mock data (for now) #}
+{% set shops = [
+    { name: 'Berlin Store', country: 'Germany'},
+    { name: 'London Store', country: 'UK'}
+] %}
+
+{% do page.addArrayExtension('physicalShops', shops) %}
